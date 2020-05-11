@@ -1,0 +1,90 @@
+$base-padding: 1rem;
+$nav-background: #0e2869;
+$gragient: linear-gradient(115deg, rgba(14,40,105,1) 36%, rgba(57,49,124,1) 60%, rgba(57,49,124,0.9682247899159664) 84%);
+$gragient2: linear-gradient(115deg,  rgba(42,35,94,0.958420868347339) 36%, rgba(49,42,108,1) 60%, rgba(14,40,105,1) 84%);
+
+@mixin clipPath($path) {
+    -webkit-clip-path: $path;
+    -moz-clip-path:$path;
+    -o-clip-path: $path;
+    clip-path: $path;  
+}
+
+@mixin  animateIntro($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+    
+}
+
+.IntroWrapper{
+    height: 30rem;
+    width: 100%;
+    position: relative;
+
+    .Intro{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        @include clipPath(polygon(0% 0%, 100% 0, 100% 30%, 75% 100%, 0% 100%));   
+        background : $nav-background;
+        background: $gragient;
+        @include animateIntro(t 6s ease-in infinite);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p{
+            margin: 0;
+            color: white;
+            font-size: 3em;
+        }
+
+        @media screen and (max-width:768px){
+
+            p{
+                font-size: 1.8em;
+            }
+         
+         }
+    }
+    
+}
+
+@keyframes t{
+    0%{
+        background: $gragient;
+    }
+    100%{
+        background: $gragient2;
+    }
+}
+
+.AboutSection{
+    height: 200px;
+    width: 100%;
+    background-color: red;
+}
+.SkillsSection{
+    height: 200px;
+    width: 100%;
+    background-color: yellow;
+    
+}
+.ProjectsSection{
+    height: 200px;
+    width: 100%;
+    background-color: blue;
+
+}
+.ContactSection{
+    height: 200px;
+    width: 100%;
+    background-color: green;
+
+}
+
+

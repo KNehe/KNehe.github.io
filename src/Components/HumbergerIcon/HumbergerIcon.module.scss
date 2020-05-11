@@ -1,0 +1,25 @@
+.Main{
+    padding-right: 2rem;
+}
+.Lines{
+    color: wheat;
+    width: 2.5rem;
+    border-bottom: .1rem solid white;
+}
+.Line1{
+    @extend .Lines
+}
+.Line2{
+    @extend .Lines;
+    padding-top: .5rem;
+}
+
+.Line3{
+    @extend .Lines;
+    padding-top: .5rem;
+}
+
+.Line4{
+    @extend .Lines;
+    padding-top: .5rem;
+}
