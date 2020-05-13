@@ -1,9 +1,14 @@
 import React from 'react';
 import Styles from'./Layout.module.scss';
 import Navigation from './../Navigation/Navigation';
+import About from './../About/About';
+import Skills from './../Skills/Skills';
+import Projects from './../Projects/Projects';
+import Contact from './../Contact/Contact';
+import Footer from './../Footer/Footer';
 
 
-const Layout = props =>{
+const layout = () =>{
 
 
     return(
@@ -22,26 +27,18 @@ const Layout = props =>{
                    
                 </section>
 
-                <section className={Styles.AboutSection}>
-                    <h4>About</h4>
-                </section>
+                <About/>
 
-                <section className={Styles.SkillsSection}>
-                <h4>Skills</h4>
-                </section>
+                <Skills/>
 
-                <section className={Styles.ProjectsSection} id="projects">
-                <h4>Projects</h4>
-                </section>
+                <Projects/>
 
-                <section className={Styles.ContactSection} id="contact">
-                <h4>Contact</h4>
-                </section>
+                <Contact/>
+
+                <Footer/>
+                
 
             </main>
-           
-
-        
 
         </React.Fragment>
      
@@ -49,4 +46,4 @@ const Layout = props =>{
     );
 };
 
-export default Layout;
+export default layout;

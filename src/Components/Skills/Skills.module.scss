@@ -1,0 +1,68 @@
+$color: #0e2869;
+
+.Main{
+
+     display: flex;
+     flex-direction: column;
+
+    .Title{
+        align-self: center;
+        h4{
+            margin: 0;
+            font-size: 2em;
+            color:$color;
+            padding-top: 1rem;
+        }
+    }
+    
+}
+
+.Articles{
+    height: auto;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit , minmax(15rem,1fr));
+    gap: 1rem;
+}
+
+.Language{
+    background: rgb(0,0,0);
+    background: linear-gradient(115deg, rgba(0,0,0,1) 0%, rgba(18,51,142,1) 50%, rgba(101,83,240,1) 100%, rgba(80,68,175,0.958420868347339) 100%, rgba(79,68,167,1) 100%);
+    display: grid;
+    place-items: center;
+    opacity: 0.8;
+    transition: opacity .5s ease-in;    
+
+    .Logo{
+        height: 5rem;
+        width: 15rem;
+        display: grid;
+        place-items: center;
+
+        img{
+            padding-top: 1rem;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50px;
+        }
+    }
+
+    .Content{
+        text-align: center;
+        color: white;
+
+        h4{
+            margin: 0;
+            font-size: 2em;
+        }
+        p{
+            font-size: 1.2em;   
+            font-weight: 400;         
+        }
+    }
+}
+
+.Language:hover{
+    opacity: 1;
+}
