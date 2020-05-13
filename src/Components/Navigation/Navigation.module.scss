@@ -59,8 +59,7 @@ nav{
    div{
        a{
            @extend .AnchorTag;
-           font: 1.5em bold;
-           
+           font: 1.5em bold;   
        }
    }
    .Title{
@@ -82,14 +81,26 @@ nav{
 
        li{
            padding: .5rem;
-           transition: all .4s ease-in;
+           transition: all .5s ease-in;
        }
 
        li:hover{
            background-color: #0c37a3;
-           border-radius: .5rem;
+           border-radius: .4rem;
        }
    }
+}
+
+.ActiveLink{
+    background-color: #174bcf;
+    border-radius: .4rem;
+    margin: .1rem;
+}
+
+.ActiveLinkSmall{
+    background-color: #174bcf;
+    padding: 1rem;
+    border-radius: .4rem;
 }
 
 @media screen and (max-width:768px){
