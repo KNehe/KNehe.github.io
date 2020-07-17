@@ -15,7 +15,7 @@ test('render navigation', ()=>{
 
     const { getAllByText } = render( appToRender );
 
-    const navTitles = getAllByText(/My Portfolio/i);
+    const navTitles = getAllByText(/Nehemiah Kamolu/i);
     for( const navTitle of navTitles){
         expect(navTitle).toBeInTheDocument();
     }
