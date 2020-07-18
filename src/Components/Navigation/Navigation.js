@@ -20,8 +20,7 @@ const Navigation = () =>{
 
         const anchor = document.querySelector(elementId);
         anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
-    }
-
+    };
 
     return (
         
@@ -31,7 +30,7 @@ const Navigation = () =>{
                     <nav className={Styles.LargeDevice}>
 
                     <div>
-                        <a  >My Portfolio</a>
+                        <a>My Portfolio</a>
                     </div>
 
                     <ul> 
