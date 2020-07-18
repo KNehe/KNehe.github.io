@@ -6,10 +6,14 @@ import Skills from './../Skills/Skills';
 import Projects from './../Projects/Projects';
 import Contact from './../Contact/Contact';
 import Footer from './../Footer/Footer';
-
+import SVG from './../../Assets/devices.svg';
 
 const layout = () =>{
 
+    const onBtnClikedHandler =  (event,elementId) =>{
+        const anchor = document.querySelector("#about");
+        anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
+    };
 
     return(
 
@@ -17,14 +21,23 @@ const layout = () =>{
 
             <Navigation/>
 
-            <main>
+            <main className={Styles.Global} >
 
-                <section className={Styles.IntroWrapper}>
+                <section className={Styles.IntroWrapper} >
                     <div className={Styles.Intro}>
-                      <p style={{ marginTop:'1rem'}}>Hi, I'm Nehemiah.</p>
-                      <p>A software Developer</p>
-                    </div>
-                   
+                        <div className={Styles.IntroMessage}>
+
+                            <div>
+                            <img src={SVG}  style={{ width:"20em", height:"20", padding:"1.2em"}} alt='devices'/>
+                            </div>
+
+                            <div className={Styles.IntroText} style={{margin:"0"}}>
+                             <p >Hi, I'm Nehemiah.</p>
+                             <p>A software Developer</p>
+                            </div>                           
+                        </div>
+                        <button className={Styles.IntroBtn} onClick={onBtnClikedHandler}>About Me</button>  
+                    </div>                  
                 </section>
 
                 <About/>
@@ -36,7 +49,6 @@ const layout = () =>{
                 <Contact/>
 
                 <Footer/>
-                
 
             </main>
 
