@@ -1,11 +1,13 @@
+$color: #D74034;
+
 .Main{
     padding-right: 2rem;
 }
 .Lines{
-    color: wheat;
     width: 2.5rem;
-    border-bottom: .1rem solid white;
+    border-bottom: .1rem solid $color;
 }
+
 .Line1{
     @extend .Lines
 }
@@ -23,3 +25,12 @@
     @extend .Lines;
     padding-top: .5rem;
 }
+
+.Close{
+    color:  #D74034;
+    font-size: 3em;
+    padding:  5px;
+    width: 2.4rem;
+    margin-top: -0.5em;
+}
+

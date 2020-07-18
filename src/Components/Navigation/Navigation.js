@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Styles from'./Navigation.module.scss';
 import HumbegerIcon from '../HumbergerIcon/HumbergerIcon';
 import { NavLink} from 'react-router-dom';
@@ -6,14 +6,15 @@ import { NavLink} from 'react-router-dom';
 const Navigation = () =>{
 
     const [ulDisplay, setUlDisplay]= useState('none');
-
-    const onHumbergerClickedHanlder = event =>{
+    const [toggle, setToggle]= useState(true);
+    
+        const onHumbergerClickedHanlder = event =>{
         
         event.preventDefault();
+        setToggle(prev => !prev);
         
         setUlDisplay( prevValue => prevValue === 'none' ? '' : 'none');
         
-
     };
 
     const navClickHandler =  (event,elementId) =>{
@@ -30,7 +31,9 @@ const Navigation = () =>{
                     <nav className={Styles.LargeDevice}>
 
                     <div>
-                        <a>My Portfolio</a>
+
+                        <a>Nehemiah Kamolu</a>
+
                     </div>
 
                     <ul> 
@@ -39,7 +42,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#about')}
                                  to="/about"
                                  exact
-                                 activeClassName={Styles.ActiveLink}>
+                                 >
                                      About
                             </NavLink>
                         </li>
@@ -49,7 +52,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#skills')}
                                  to="/skills"
                                  exact
-                                 activeClassName={Styles.ActiveLink}>
+                                 >
                                      Skills
                             </NavLink>
                         </li>
@@ -59,7 +62,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#projects')}
                                  to="/projects"
                                  exact
-                                 activeClassName={Styles.ActiveLink}>
+                                 >
                                      Projects
                             </NavLink>
                         </li>
@@ -69,7 +72,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#contact')}
                                  to="/contact"
                                  exact
-                                 activeClassName={Styles.ActiveLink}>
+                                 >
                                      Contact
                             </NavLink>
                         </li>
@@ -78,12 +81,12 @@ const Navigation = () =>{
                     </nav>
 
                     {/* Nav bar for small devices with different activeClassName */}
-                    <nav className={Styles.SmallDevice}>
+                    <nav className={Styles.SmallDevice} >
 
                     <div className={Styles.Title}>
 
-                        <a href="#" >My Portfolio</a>
-                        <HumbegerIcon click={onHumbergerClickedHanlder}/>
+                        <a href="#" >Nehemiah Kamolu</a>
+                        <HumbegerIcon click={onHumbergerClickedHanlder} toggle={toggle}/>
 
                     </div>
 
@@ -93,7 +96,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#about')}
                                  to="/about"
                                  exact
-                                 activeClassName={Styles.ActiveLinkSmall}>
+                                 >
                                      About
                             </NavLink>
                         </li>
@@ -103,7 +106,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#skills')}
                                  to="/skills"
                                  exact
-                                 activeClassName={Styles.ActiveLinkSmall}>
+                                 >
                                      Skills
                             </NavLink>
                         </li>
@@ -113,7 +116,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#projects')}
                                  to="/projects"
                                  exact
-                                 activeClassName={Styles.ActiveLinkSmall}>
+                                 >
                                      Projects
                             </NavLink>
                         </li>
@@ -123,7 +126,7 @@ const Navigation = () =>{
                                  onClick={ (event) => navClickHandler(event,'#contact')}
                                  to="/contact"
                                  exact
-                                 activeClassName={Styles.ActiveLinkSmall}>
+                                 >
                                      Contact
                             </NavLink>
                         </li>
