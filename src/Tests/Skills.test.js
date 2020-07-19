@@ -15,7 +15,7 @@ test(' renders skills section', ()=>{
       expect(alt).toBeInTheDocument();
     }
   
-    const  javaSkill = getByText(/Java/i); 
+    const  javaSkill = getByText('Java'); 
     expect(javaSkill).toBeInTheDocument();
     
     const  javaSkillDesc = getByText(/Spring Boot/i);
@@ -44,7 +44,7 @@ test(' renders skills section', ()=>{
     const webText = getByText(/Web/i);
     expect(webText).toBeInTheDocument();
   
-    const webDesc = getByText(/HTML5 \/ CSS3 \/ SASS/i);
+    const webDesc = getByText(/HTML5 \/CSS3 \/SASS/i);
     expect(webDesc).toBeInTheDocument();
   
     const pythonText = getByText(/Python/i);

@@ -9,6 +9,11 @@ import HTML from './../Assets/html.png';
 import Dart from './../Assets/dart.png';
 import Python from './../Assets/python.png';
 import Typescript from './../Assets/ts.png';
+import MongoDB from './../Assets/mongodb.png';
+import MySQL from './../Assets/mysql.svg';
+import CloudFirestore from './../Assets/cloudfirestore.png';
+
+
 
 const projects = [
 
@@ -67,7 +72,7 @@ const skills = [
     {
         Id: 2,
         Image: JS,
-        Title: 'JS',
+        Title: 'Javascript',
         Description: 'Node/Express, ReactJs'
     },
     {
@@ -86,13 +91,31 @@ const skills = [
         Id: 5,
         Image: HTML,
         Title: 'Web',
-        Description: 'HTML5 / CSS3 / SASS'
+        Description: 'HTML5 /CSS3 /SASS'
     },
     {
         Id: 6,
         Image: Python,
         Title: 'Python',
         Description: 'Basics'
+    },
+    {
+        Id: 7,
+        Image: MySQL,
+        Title: 'SQL',
+        Description: 'MySQL'
+    },
+    {
+        Id: 8,
+        Image: MongoDB,
+        Title: 'No SQL',
+        Description: 'MongoDB'
+    },
+    {
+        Id: 9,
+        Image: CloudFirestore,
+        Title: 'Firebase',
+        Description: 'Cloud Firestore'
     }
 ];
 
