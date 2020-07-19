@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Styles from'./Navigation.module.scss';
 import HumbegerIcon from '../HumbergerIcon/HumbergerIcon';
 import { NavLink} from 'react-router-dom';

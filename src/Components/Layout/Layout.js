@@ -36,7 +36,7 @@ const layout = () =>{
                              <p>A software Developer</p>
                             </div>                           
                         </div>
-                        <button className={Styles.IntroBtn} onClick={onBtnClikedHandler}>About Me</button>  
+                        <button className={Styles.IntroBtn} onClick={onBtnClikedHandler}>About</button>  
                     </div>                  
                 </section>
 
