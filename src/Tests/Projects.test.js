@@ -6,10 +6,10 @@ test('render projects section', ()=>{
 
     const { getAllByAltText , getAllByText } = render( <Projects/> );
   
-    const images = getAllByAltText(/Project/i);
-    for( const image of images){
-      expect(image).toBeInTheDocument();
-    }
+    // const images = getAllByAltText(/Project/i);
+    // for( const image of images){
+    //   expect(image).toBeInTheDocument();
+    // }
   
     const projectsWithExpressText = getAllByText(/ExpressJS/i);
     for(const project of projectsWithExpressText){

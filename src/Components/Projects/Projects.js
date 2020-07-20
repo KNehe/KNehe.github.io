@@ -23,11 +23,11 @@ const projects = () =>{
               <h4 id='projects'>Projects</h4>
             </div>
             
-            <section className={Styles.Projects}>
+            <div className={Styles.Projects}>
 
                 {projects}             
 
-            </section>
+            </div>
 
         </div>
     );
