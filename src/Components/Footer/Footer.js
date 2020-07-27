@@ -5,7 +5,7 @@ const footer = ()=>{
     
     const currentYear = new Date().getFullYear();
     return(
-        <footer>
+        <footer className={Styles.Footer}>
             <h4> &copy; {currentYear} - Nehemiah Kamolu</h4>
         </footer>
     );

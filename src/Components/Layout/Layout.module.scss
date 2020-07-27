@@ -2,6 +2,24 @@ $base-padding: 1rem;
 $background: #f1d9c9;
 $text-color: #D74034;
 
+*{
+    scrollbar-width: .5em;
+    scrollbar-color: #D74034 #ddd6d5;
+ }
+
+::-webkit-scrollbar {
+    width: .5em;
+  }
+  
+::-webkit-scrollbar-track {
+    background: #ddd6d5;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #D74034;
+  }
+
+  
 .Global{
     background-color: #F4EBE5;
 }
@@ -10,12 +28,12 @@ $text-color: #D74034;
     height: 100vh;
     width: 100%;
     position: relative;
-
     .Intro{
         position: absolute;
         height: 100%;
         width: 100%;
-        background : $background;
+        background-color: $background;
+
         display: flex;
         align-items: center;
         justify-content: center;

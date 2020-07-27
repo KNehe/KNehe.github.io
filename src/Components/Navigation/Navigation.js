@@ -7,6 +7,8 @@ const Navigation = () =>{
 
     const [ulDisplay, setUlDisplay]= useState('none');
     const [toggle, setToggle]= useState(true);
+
+    const [ showShadow, setNavShadow] = useState(false);
     
         const onHumbergerClickedHanlder = event =>{
         
@@ -14,6 +16,10 @@ const Navigation = () =>{
         setToggle(prev => !prev);
         
         setUlDisplay( prevValue => prevValue === 'none' ? '' : 'none');
+
+         if(toggle){
+            setNavShadow(true);
+        }
         
     };
 
@@ -23,12 +29,21 @@ const Navigation = () =>{
         anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
     };
 
+    window.onscroll = ()=>{
+      if(window.pageYOffset > 50){
+          setNavShadow(true);
+      }else{
+          setNavShadow(false);
+
+      }
+    };
+
     return (
         
         <React.Fragment>
 
                     {/* Nav bar for  large devices */}
-                    <nav className={Styles.LargeDevice}>
+                    <nav className={Styles.LargeDevice} style={{ boxShadow: showShadow? '1px 2px 8px rgba(215, 64, 52, 0.4)': ''}}>
 
                     <div>
 
@@ -81,7 +96,7 @@ const Navigation = () =>{
                     </nav>
 
                     {/* Nav bar for small devices with different activeClassName */}
-                    <nav className={Styles.SmallDevice} >
+                    <nav className={Styles.SmallDevice} style={{ boxShadow: showShadow? '1px 2px 8px rgba(215, 64, 52, 0.4)': ''}} >
 
                     <div className={Styles.Title}>
 

@@ -1,31 +1,31 @@
-$background-color: rgba(172, 172, 252,0.5);
-$color: #0e2869;
+$background-color: #e9c9b4;
+$color: #D74034;
 $padding: 1rem;
-$radius: 50px;
+$radius: 1em;
 
-@import './../Navigation/Navigation.module.scss';
 
 .InputStlyes{
-            border: 1px solid $color;
+            border: 0px;
             padding: $padding;
             border-radius: $radius;
             color: black;
             font-size: 1em;
-            background-color: $background-color;
+            background-color: #F4EBE5;
             text-align: center;
+            box-shadow: inset 1px 1px 3px rgba(236, 151, 151, 0.8), 1px 2px 3px rgba(236, 151, 151, 0.8);
 
 }
 .InputFocusStyles{
-            border: 2px solid $color;
             outline: none;
+            border: 2px solid rgba(233, 171, 135, 0.8);
 }
 
 .Main{
-    display: grid;
-    grid-template-columns: repeat( autofit, minmax(240px,1fr));
-    place-items: center;
-
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
     background-color: $background-color;
     width: 100%;
     box-sizing: border-box;
@@ -33,19 +33,29 @@ $radius: 50px;
 
     h4{
         margin: 0;
-        font-size: 2em;
-        color:$color;
+        font-size: 2.5em;
+        color:#cf3227;
+        padding-bottom: 1rem;
+    }
+
+    .InnerDiv{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:  1em 0em;
+        gap: 1em;
+        box-sizing: border-box;
     }
 
     form{
         display: flex;
         flex-direction: column;
-        width: 50%;
-
+        width: 40%;
+        box-sizing: border-box;
         input[type='email']{
-            margin: .5em;
+            margin-bottom: .4em;
             @extend .InputStlyes;
-            transition: border .4s ease-in;
         }
 
         input[type='email']:focus{
@@ -57,8 +67,6 @@ $radius: 50px;
             @extend .InputStlyes;
             font-size: 1.3em;
             resize: none;
-            transition: border .4s ease-in;
-
         }
 
         textarea:focus{
@@ -67,7 +75,7 @@ $radius: 50px;
 
         button{
             height: 3rem;
-            width: 60%;
+            width:100%;
             align-self: center;
             border-radius: $radius;
             outline: none;
@@ -76,18 +84,42 @@ $radius: 50px;
             border: none;
             color: white;
             transition: background-color .4s ease-in;
-        }
+            margin-top: 1em;
+            box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
+            }
 
         button:hover{
-            background-color: #0c37a3;
+            background-color: #da7871;
         }
 
+    }    
 
-
+    .SocialLinks{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        padding-left: 3em;
+        box-sizing: border-box;
     }
 }
 
 .InvalidInput{
     border: 2px solid red !important;
 }
+
+@media screen and (max-width:768px){
+    
+    .Main{
+        .InnerDiv{
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .SocialLinks{
+        padding-top: 1em;
+    }
+    
+ 
+ }
 
