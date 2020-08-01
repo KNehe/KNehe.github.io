@@ -61,6 +61,7 @@ nav{
    padding: $base-padding;
    position: fixed;
    width: 100%;
+   -webkit-backface-visibility: hidden;
 
    div{
        a{

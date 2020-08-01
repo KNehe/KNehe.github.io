@@ -112,6 +112,10 @@ $text-color: #D74034;
         font-size: 2.3em !important; 
         text-align: center;      
     } 
+    .IntroWrapper{
+        min-height: 100vh !important;
+        min-height: -webkit-fill-available !important;
+    }
  }
 
 

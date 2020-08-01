@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Styles from'./Layout.module.scss';
 import Navigation from './../Navigation/Navigation';
 import About from './../About/About';
@@ -8,8 +8,15 @@ import Contact from './../Contact/Contact';
 import Footer from './../Footer/Footer';
 import SVG from './../../Assets/devices.svg';
 
-const layout = () =>{
-
+const Layout = () =>{
+    
+//     useEffect(()=>{
+//       window.addEventListener('resize', () => {
+//     let vh = window.innerHeight * 0.01;
+//     document.documentElement.style.setProperty('--vh', `${vh}px`);
+//   });
+//     },[])
+    
     const onBtnClikedHandler =  (event,elementId) =>{
  
         let width = document.documentElement.clientWidth;
@@ -26,6 +33,9 @@ const layout = () =>{
             anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
         }
     };
+    
+  
+    
 
     return(
 
@@ -70,4 +80,4 @@ const layout = () =>{
     );
 };
 
-export default layout;
+export default Layout;
