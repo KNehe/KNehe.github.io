@@ -5,6 +5,7 @@ import FacebookLogo from './../../Assets/facebook.svg';
 import LinkedInLogo from './../../Assets/linkedin-logo.svg';
 import InstagramLogo from './../../Assets/instagram.svg';
 import ReactToolTip from 'react-tooltip';
+import axios from './../Axios/axios';
 
 
 const Contact = () =>{
@@ -12,6 +13,14 @@ const Contact = () =>{
     const [ inputVal , setInputVal ] = useState( { email:'', message: '' });
    
     const [ error ,setError ] = useState( { email : false, message: false });
+
+    const [ buttonTxt , setBtnText ] = useState('Send Message');
+
+    const [ messageTxt , setMgText ] = useState('');
+
+    const [formRef,setFormRef] = useState({});
+    
+    const [ messageTxtStyles , setMessageTxtStyle] = useState('');
    
 
     const onInputChangedHandler = (event, inputName) =>{
@@ -54,7 +63,42 @@ const Contact = () =>{
             return;
         }
 
-        setError({message:'', email:''});
+        setBtnText('Sending ...');
+        
+        const data = {
+            "from": inputVal.email,
+            "subject": "Email from portfolio",
+            "message": inputVal.message
+           };
+
+        axios.post("/contactus/sendmail", data)
+        .then(res=>{
+        
+        setBtnText('Send Message');
+        setMessageTxtStyle(Styles.MessageSuccess);
+        setMgText('Email Sent');
+ 
+        formRef.reset();
+
+         return setTimeout(()=>{
+            setMgText(''); 
+        },5000);
+
+        })
+        .catch(err =>{
+               
+            setBtnText('Send Message');
+
+            setMessageTxtStyle(Styles.MessageError);
+
+            setMgText('An error occured please try again'); 
+
+               formRef.reset();
+
+               return setTimeout(()=>{
+                      setMgText(''); 
+              },5000);
+        });
         
     };
 
@@ -66,7 +110,7 @@ const Contact = () =>{
 
                 <div className={Styles.InnerDiv}>
 
-                <form onSubmit={onFormSubmittedHandler}>
+                <form onSubmit={onFormSubmittedHandler} ref={ (el) => setFormRef(el) }>
                     
                     <label htmlFor='email'></label>
                     <input 
@@ -91,7 +135,14 @@ const Contact = () =>{
                         required
                         ></textarea>
 
-                    <button type='Submit'>Send Message</button>
+                    <button type='Submit'>{buttonTxt}</button>
+
+                    {
+                        messageTxt ?
+                    <small className={messageTxtStyles}>{messageTxt}</small>:
+                        ''
+                    }
+
 
                 </form>
                 
@@ -119,7 +170,7 @@ const Contact = () =>{
                 <ReactToolTip id='linkedin' backgroundColor='#D74034' effect='float'>
                          <span>LinkedIn</span>
                 </ReactToolTip>
-
+                
             </section>
     );
 };

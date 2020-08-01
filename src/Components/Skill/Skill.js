@@ -1,9 +1,8 @@
 import React from 'react';
 
 const skill = props =>{
-
     return (
-
+          
           <article className={props.Styles.Language}>
                 
           <div className={props.Styles.Logo}>

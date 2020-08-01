@@ -42,7 +42,7 @@ $radius: 1em;
         width: 80%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         padding:  1em 0em;
         gap: 1em;
         box-sizing: border-box;
@@ -98,9 +98,28 @@ $radius: 1em;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 60%;
+        width: 100%;
         padding-left: 3em;
         box-sizing: border-box;
+    }
+
+    .MessageSuccess{
+        text-align: center;
+        padding:  .6em;
+        background-color: rgb(62, 141, 17);
+        margin: auto;
+        margin-top: .2em;
+        color: white;
+        border-radius: 1em;
+    }
+    .MessageError{
+        text-align: center;
+        padding:  .6em;
+        background-color: rgb(235, 43, 43);
+        margin: auto;
+        margin-top: .2em;
+        color: white;
+        border-radius: 1em;
     }
 }
 
@@ -115,9 +134,17 @@ $radius: 1em;
             flex-direction: column;
             width: 100%;
         }
+
+        form{
+            width: 80% ;
+        }
     }
     .SocialLinks{
         padding-top: 1em;
+        justify-content: flex-start !important;
+        a{
+            padding:1em;
+        }
     }
     
  

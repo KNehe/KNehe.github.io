@@ -13,29 +13,33 @@
             color:#D74034;
             padding-top: 1rem;
             padding-bottom: 1rem;
+            box-sizing: border-box;
         }
     }
 
     .Projects{
         display: grid;
+        place-items: center;
         grid-template-columns: repeat( auto-fit , minmax(20rem,1fr));
-        gap: 1rem;
+        gap: .5rem;
+        row-gap: .5rem;
         
         .Project{
             display: flex;
             flex-direction: column;
-            background: rgb(236,210,195);
-            // background:linear-gradient(123deg, rgba(236,210,195,0.6587009803921569) 0%, rgba(225,110,101,0.6867121848739496) 100%);
-
             background-color: #f7f0f0;
             padding: 1rem;
             box-shadow: 1px 4px 10px rgba(134, 131, 131,0.6);
             position: relative;
+            align-self: flex-start;
+            justify-self: flex-start;
+            width: 100%;
+            text-align: center;
             box-sizing: border-box;
                         
             .Description{
                 align-self: center;
-                font-size: 1.4em;
+                font-size: 1.2em;
                 color: #9e3d36;
             }
             .Links{
@@ -53,3 +57,8 @@
     }
 }
 
+@media screen and (max-width: 768px){
+    .Projects{
+        grid-template-columns: repeat( auto-fit , minmax(15rem,1fr)) !important;
+    }
+}

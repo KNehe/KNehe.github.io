@@ -24,10 +24,23 @@ const Navigation = () =>{
     };
 
     const navClickHandler =  (event,elementId) =>{
-
+        event.preventDefault();
         const anchor = document.querySelector(elementId);
         anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
+        setUlDisplay('none');
+        setToggle(prev => !prev);
     };
+
+    const navClickHandler2 =  () =>{
+
+        window.scrollTo({
+            top: 300,
+            behavior: 'smooth',
+          });
+          setUlDisplay('none');
+        setToggle(prev => !prev);
+    }
+
 
     window.onscroll = ()=>{
       if(window.pageYOffset > 50){
@@ -47,7 +60,7 @@ const Navigation = () =>{
 
                     <div>
 
-                        <a>Nehemiah Kamolu</a>
+                        <a href="/">Nehemiah Kamolu</a>
 
                     </div>
 
@@ -100,7 +113,7 @@ const Navigation = () =>{
 
                     <div className={Styles.Title}>
 
-                        <a href="#" >Nehemiah Kamolu</a>
+                        <a href="/" >Nehemiah Kamolu</a>
                         <HumbegerIcon click={onHumbergerClickedHanlder} toggle={toggle}/>
 
                     </div>
@@ -108,7 +121,7 @@ const Navigation = () =>{
                     <ul style={{ display: ulDisplay }}> 
                     <li>
                             <NavLink 
-                                 onClick={ (event) => navClickHandler(event,'#about')}
+                                 onClick={ (event) => navClickHandler2(event,'#about')}
                                  to="/about"
                                  exact
                                  >

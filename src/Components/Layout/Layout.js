@@ -11,8 +11,20 @@ import SVG from './../../Assets/devices.svg';
 const layout = () =>{
 
     const onBtnClikedHandler =  (event,elementId) =>{
-        const anchor = document.querySelector("#about");
-        anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
+ 
+        let width = document.documentElement.clientWidth;
+
+        if(width <= 460){
+
+                window.scrollTo({
+                    top: 300,
+                    behavior: 'smooth',
+                  });
+
+        }else{
+            const anchor = document.querySelector("#about");
+            anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
+        }
     };
 
     return(

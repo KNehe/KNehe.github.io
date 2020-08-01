@@ -16,49 +16,71 @@ import CloudFirestore from './../Assets/cloudfirestore.png';
 
 
 const projects = [
-
     {  
         Id:1,
-        Image: Tuulye,
-        Description: 'Tuulye (Restaurant App) - ReactJS',
-        GitHubLink: 'https://github.com/KNehe/Tuulye-FrontEnd',
-        WebLink: ''
-    },
-     {  
-        Id:2,
-        Image: ShareNews,
-        Description: 'Share News (Social App) - Spring Boot',
-        GitHubLink: 'https://github.com/KNehe/share-news',
-        WebLink: ''
-    },
-    {  
-        Id:3,
-        Image: NodeJs,
-        Description: 'Tuulye (Restaurant API) - ExpressJs',
-        GitHubLink: 'https://github.com/KNehe/Tuulye-Backend',
-        WebLink: ''
-    },
-    {  
-        Id:4,
-        Image: ExpenseManager,
-        Description: 'Expense Manager - Flutter Mobile',
-        GitHubLink: 'https://github.com/KNehe/Expense-Manager',
-        WebLink: ''
-    }
-    , {  
-        Id:5,
         Image: Spring,
         Description: 'House Rent - SpringBoot Microservices',
         GitHubLink: 'https://github.com/KNehe/House-Rent-MicroServices',
         WebLink: ''
     },
     {  
-        Id:6,
+        Id:2,
+        Image: Spring,
+        Description: 'ChatApp API - Spring Boot',
+        GitHubLink: 'https://github.com/KNehe/Chat-app-api',
+        WebLink: ''
+    },
+    {  
+        Id:3,
         Image: Spring,
         Description: 'Pharmacy System - Spring Boot API ',
         GitHubLink: 'https://github.com/KNehe/OnlineMedicineShop-Backend',
         WebLink: ''
+    },
+    {  
+        Id:4,
+        Image: JS,
+        Description: 'MovieAPI - Express GraphQL',
+        GitHubLink: 'https://github.com/KNehe/MovieAPI',
+        WebLink: ''
+    },
+    {  
+        Id:5,
+        Image: Tuulye,
+        Description: 'Tuulye (Restaurant App) - ReactJS',
+        GitHubLink: 'https://github.com/KNehe/Tuulye-FrontEnd',
+        WebLink: ''
+    },
+     {  
+        Id:6,
+        Image: ShareNews,
+        Description: 'Share News (Social App) - Spring Boot',
+        GitHubLink: 'https://github.com/KNehe/share-news',
+        WebLink: ''
+    },
+    {  
+        Id:7,
+        Image: NodeJs,
+        Description: 'Tuulye (Restaurant API) - ExpressJs',
+        GitHubLink: 'https://github.com/KNehe/Tuulye-Backend',
+        WebLink: ''
+    },
+    {  
+        Id:8,
+        Image: ExpenseManager,
+        Description: 'Expense Manager - Flutter Mobile',
+        GitHubLink: 'https://github.com/KNehe/Expense-Manager',
+        WebLink: ''
+    },
+    {  
+        Id:9,
+        Image: JS,
+        Description: 'Pharmacy -Angular',
+        GitHubLink: 'https://github.com/KNehe/OnlineMedicineShop-FrontEnd',
+        WebLink: ''
     }
+   
+    
 ];
 
 const skills = [
