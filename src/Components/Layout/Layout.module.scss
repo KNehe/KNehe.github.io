@@ -23,10 +23,11 @@ $text-color: #D74034;
 .Global{
     background-color: #F4EBE5;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
+
 .IntroWrapper{
-    height: 100vh;
     width: 100%;
     position: relative;
     .Intro{
@@ -69,7 +70,6 @@ $text-color: #D74034;
     box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
     width: 15%;
     transition: background-color .8s ease-in;
-
 }
 
 .IntroBtn:hover{
@@ -105,17 +105,13 @@ $text-color: #D74034;
  }
 
  @media screen and (max-width:360px){
-    .IntroBtn{
-        width: 20%;
-    }   
+    // .IntroBtn{
+    //     visibility: hidden;
+    // }   
     .IntroText{
         font-size: 2.3em !important; 
         text-align: center;      
     } 
-    .IntroWrapper{
-        min-height: 100vh !important;
-        min-height: -webkit-fill-available !important;
-    }
  }
 
 

@@ -2,12 +2,16 @@ import React from 'react';
 import { render} from '@testing-library/react';
 import Layout from './../Components/Layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
+import {StyleRoot}from 'radium';
+
 
 test('renders intro', ()=>{
 
     const appToRender = (
-        <BrowserRouter> 
-           <Layout/>
+        <BrowserRouter>
+        <StyleRoot>
+            <Layout/>
+        </StyleRoot> 
          </BrowserRouter>
     );
 

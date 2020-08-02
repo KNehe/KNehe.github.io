@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Styles from'./Layout.module.scss';
 import Navigation from './../Navigation/Navigation';
 import About from './../About/About';
@@ -7,15 +7,24 @@ import Projects from './../Projects/Projects';
 import Contact from './../Contact/Contact';
 import Footer from './../Footer/Footer';
 import SVG from './../../Assets/devices.svg';
+import resizeWindow from './../Hooks/resizeWindow';
+import Radium from 'radium';
+
 
 const Layout = () =>{
-    
-//     useEffect(()=>{
-//       window.addEventListener('resize', () => {
-//     let vh = window.innerHeight * 0.01;
-//     document.documentElement.style.setProperty('--vh', `${vh}px`);
-//   });
-//     },[])
+
+    let introHeight = resizeWindow().height;
+
+    const imgStyles ={
+        width:"20em",
+        height:"20em",
+        padding:"1.2em",
+        '@media screen and (max-width:768px)':{
+            width:"10em",
+            paddingBottom:'1em',
+            height:"10em"
+        }
+    }
     
     const onBtnClikedHandler =  (event,elementId) =>{
  
@@ -32,9 +41,7 @@ const Layout = () =>{
             const anchor = document.querySelector("#about");
             anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
         }
-    };
-    
-  
+    };    
     
 
     return(
@@ -45,13 +52,11 @@ const Layout = () =>{
 
             <main className={Styles.Global} >
 
-                <section className={Styles.IntroWrapper} >
+                <section className={Styles.IntroWrapper} style={ {height: introHeight}}>
                     <div className={Styles.Intro}>
                         <div className={Styles.IntroMessage}>
 
-                            <div>
-                            <img src={SVG}  style={{ width:"20em", height:"20", padding:"1.2em"}} alt='devices'/>
-                            </div>
+                            <img src={SVG}  style={imgStyles} alt='devices'/>
 
                             <div className={Styles.IntroText} style={{margin:"0"}}>
                              <p >Hi, I'm Nehemiah.</p>
@@ -80,4 +85,4 @@ const Layout = () =>{
     );
 };
 
-export default Layout;
+export default Radium(Layout);

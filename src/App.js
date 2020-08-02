@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from './Components/Layout/Layout';
+import {StyleRoot}from 'radium';
+
 
 function App() {
   return (
-    <Layout/>
+    <StyleRoot>
+      <Layout/>
+    </StyleRoot>
   );
 }
 

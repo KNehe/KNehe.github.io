@@ -1,5 +1,5 @@
 {
-  "homepage":"https://KNehe.github.io/Portfolio",
+  "homepage": "https://KNehe.github.io/Portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +10,9 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "coveralls": "^3.1.0",
+    "cross-env": "^7.0.2",
     "node-sass": "^4.14.1",
+    "radium": "^0.26.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -18,8 +20,8 @@
     "react-tooltip": "^4.2.7"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,14 +32,13 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "since 2010"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "last 1 ie version"
     ]
   },
   "devDependencies": {
