@@ -29,18 +29,19 @@ const Layout = () =>{
     const onBtnClikedHandler =  (event,elementId) =>{
  
         let width = document.documentElement.clientWidth;
+        const anchor = document.querySelector("#about");
 
         if(width <= 460){
 
                 window.scrollTo({
-                    top: 300,
+                    top: 350,
                     behavior: 'smooth',
                   });
 
         }else{
-            const anchor = document.querySelector("#about");
             anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
         }
+        
     };    
     
 

@@ -1,13 +1,20 @@
 $color: #D74034;
 
 .Main{
-     display: flex;
-     flex-direction: column;
-     margin: auto;
-     margin-top: 2rem;
-     width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 4em;
+    width: 80%;
 
     .Title{
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
         h4{
             margin: 0;
@@ -19,6 +26,7 @@ $color: #D74034;
 }
 
 .Articles{
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat( auto-fit , minmax(15rem,1fr));
     gap: .5rem;
@@ -26,14 +34,17 @@ $color: #D74034;
 }
 
 .Language{
+    display: -ms-grid;
     display: grid;
     place-items: center;
     position: relative; 
     height: 10em ;
+    -webkit-border-radius: .5rem;
     border-radius: .5rem;
     .Logo{
         height: 10em;
         width: 100%;
+        display: -ms-grid;
         display: grid;
         place-items: center;
         
@@ -41,6 +52,7 @@ $color: #D74034;
             min-width: 100%;
             height: 10em;
             max-width: 100%;;
+            -webkit-box-sizing: border-box;;
             box-sizing: border-box;
             border-radius: .5rem;
         }
@@ -51,6 +63,7 @@ $color: #D74034;
         width: 100%;
         height: 100%;
         position: absolute;
+        -webkit-box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
         box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
         border-radius: .5rem ;
 

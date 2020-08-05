@@ -22,6 +22,7 @@ $text-color: #D74034;
   
 .Global{
     background-color: #F4EBE5;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -35,10 +36,22 @@ $text-color: #D74034;
         height: 100%;
         width: 100%;
         background-color: $background;
-
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
 
         .IntroMessage{
@@ -66,9 +79,13 @@ $text-color: #D74034;
     background-color: rgb(252, 85, 8);
     border: none;
     color: #ffffff;
-    border-radius: 25px;
-    box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
+    -webkit-border-radius: 25px;
+            border-radius: 25px;
+    -webkit-box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
+            box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
     width: 15%;
+    -webkit-transition: background-color .8s ease-in;
+    -o-transition: background-color .8s ease-in;
     transition: background-color .8s ease-in;
 }
 
@@ -78,6 +95,7 @@ $text-color: #D74034;
 
 .IntroBtn:focus{
     outline: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -88,7 +106,11 @@ $text-color: #D74034;
     }  
       
     .IntroMessage{
-        flex-direction: column;
+          -webkit-box-orient: vertical;
+            -webkit-box-direction: normal; 
+             -webkit-flex-direction: column;
+               -ms-flex-direction: column; 
+                flex-direction: column;
     }
     .IntroText{
         p{
