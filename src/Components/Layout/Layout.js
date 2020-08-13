@@ -26,21 +26,14 @@ const Layout = () =>{
         }
     }
     
-    const onBtnClikedHandler =  (event,elementId) =>{
- 
-        let width = document.documentElement.clientWidth;
-        const anchor = document.querySelector("#about");
+    const onBtnClikedHandler =  event =>{
 
-        if(width <= 460){
-
-                window.scrollTo({
-                    top: 350,
-                    behavior: 'smooth',
-                  });
-
-        }else{
-            anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
-        }
+            event.preventDefault();
+                        
+            window.scrollTo({
+                top: introHeight - 50,
+                behavior: 'smooth',
+              });        
         
     };    
     
