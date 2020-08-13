@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Styles from'./Navigation.module.scss';
 import HumbegerIcon from '../HumbergerIcon/HumbergerIcon';
 import { NavLink} from 'react-router-dom';
+import resizeWindow from './../Hooks/resizeWindow';
+
 
 const Navigation = () =>{
 
@@ -9,6 +11,9 @@ const Navigation = () =>{
     const [toggle, setToggle]= useState(true);
 
     const [ showShadow, setNavShadow] = useState(false);
+
+    let introHeight = resizeWindow().height;
+
     
         const onHumbergerClickedHanlder = event =>{
         
@@ -25,19 +30,30 @@ const Navigation = () =>{
 
     const navClickHandler =  (event,elementId) =>{
         event.preventDefault();
-        const anchor = document.querySelector(elementId);
-        anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
-        setUlDisplay('none');
-        setToggle(prev => !prev);
+
+        if(elementId === "#about"){
+            window.scrollTo({
+                top: introHeight - 50,
+                behavior: 'smooth',
+              });
+        }else{
+            const anchor = document.querySelector(elementId);
+            anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
+            setUlDisplay('none');
+            setToggle(prev => !prev);
+        }
     };
 
-    const navClickHandler2 =  () =>{
+    const navClickHandler2 =  event =>{
 
+        event.preventDefault();
+                        
         window.scrollTo({
-            top: 300,
+            top: introHeight - 50,
             behavior: 'smooth',
-          });
-          setUlDisplay('none');
+          }); 
+
+        setUlDisplay('none');
         setToggle(prev => !prev);
     }
 
@@ -117,7 +133,7 @@ const Navigation = () =>{
                         <HumbegerIcon click={onHumbergerClickedHanlder} toggle={toggle}/>
 
                     </div>
-
+                    
                     <ul style={{ display: ulDisplay }}> 
                     <li>
                             <NavLink 

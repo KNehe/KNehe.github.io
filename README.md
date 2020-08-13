@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/KNehe/Potfolio.svg?branch=develop)](https://travis-ci.org/KNehe/Potfolio)
+[![Build Status](https://travis-ci.org/KNehe/Portfolio.svg?branch=master)](https://travis-ci.org/KNehe/Portfolio)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
