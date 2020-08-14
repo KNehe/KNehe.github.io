@@ -6,24 +6,37 @@ import resizeWindow from './../Hooks/resizeWindow';
 
 
 const Navigation = () =>{
+    
+    const [ulDisplay, setUlDisplay]= useState({
+        transform: 'translateY(-10px)',
+        opacity: '0'
+    });
 
-    const [ulDisplay, setUlDisplay]= useState('none');
     const [toggle, setToggle]= useState(true);
 
     const [ showShadow, setNavShadow] = useState(false);
 
     let introHeight = resizeWindow().height;
-
     
-        const onHumbergerClickedHanlder = event =>{
+    const onHumbergerClickedHanlder = event =>{
         
         event.preventDefault();
+
         setToggle(prev => !prev);
         
-        setUlDisplay( prevValue => prevValue === 'none' ? '' : 'none');
+        if(ulDisplay.transform === 'translateY(-10px)'){
 
-         if(toggle){
-            setNavShadow(true);
+            setUlDisplay({
+                transform: 'translateY(0px)',
+                opacity:'1'
+            });
+
+        }else if (ulDisplay.transform === 'translateY(0px)') {
+
+            setUlDisplay({
+                transform: 'translateY(-10px)',
+                opacity: '0'
+            });
         }
         
     };
@@ -32,14 +45,23 @@ const Navigation = () =>{
         event.preventDefault();
 
         if(elementId === "#about"){
+            
             window.scrollTo({
                 top: introHeight - 50,
                 behavior: 'smooth',
               });
+
         }else{
+
             const anchor = document.querySelector(elementId);
+            
             anchor.scrollIntoView({ behavior: 'smooth', block:'center' });
-            setUlDisplay('none');
+
+              setUlDisplay({
+                transform: 'translateY(-10px)',
+                opacity: '0'
+            });
+
             setToggle(prev => !prev);
         }
     };
@@ -53,7 +75,11 @@ const Navigation = () =>{
             behavior: 'smooth',
           }); 
 
-        setUlDisplay('none');
+        setUlDisplay({
+                transform: 'translateY(-10px)',
+                opacity: '0'
+        });
+
         setToggle(prev => !prev);
     }
 
@@ -133,8 +159,11 @@ const Navigation = () =>{
                         <HumbegerIcon click={onHumbergerClickedHanlder} toggle={toggle}/>
 
                     </div>
+
+                    </nav>
                     
-                    <ul style={{ display: ulDisplay }}> 
+                    <div className={Styles.smallNavUl}>
+                    <ul style={ulDisplay} > 
                     <li>
                             <NavLink 
                                  onClick={ (event) => navClickHandler2(event,'#about')}
@@ -175,8 +204,7 @@ const Navigation = () =>{
                             </NavLink>
                         </li>
                     </ul>
-
-                    </nav>
+                    </div>
         </React.Fragment>
     );
 
