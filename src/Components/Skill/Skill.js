@@ -7,7 +7,7 @@ const skill = props =>{
                 
           <div className={props.Styles.Logo}>
 
-               <img src={props.Image} alt="Skill"/>
+               <img src={props.Image} loading='lazy' alt="Skill"/>
 
           </div>
           
