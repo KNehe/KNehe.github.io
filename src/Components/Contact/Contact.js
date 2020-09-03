@@ -148,10 +148,10 @@ const Contact = () =>{
                 
                 <div className={Styles.SocialLinks}>
 
-                    <a data-tip data-for='twitter' href="https://twitter.com/kamolu_Nehe" target="_blank" rel="noopener noreferrer"><img src={TwitterLogo} style={{ width:"2em", height:"2em"}} alt="Twitter"/></a>
-                    <a data-tip data-for='facebook'href="https://www.facebook.com/ne.he.547/" target="blank" rel="noopener noreferrer"><img src={FacebookLogo} style={{ width:"2em", height:"2em"}} alt="Facebook"/></a>
-                    <a data-tip data-for='instagram' href="https://www.instagram.com/kamolu_nehe/" target="blank" rel="noopener noreferrer"><img src={InstagramLogo} style={{ width:"2em", height:"2em"}} alt="Instagram"/></a>
-                    <a data-tip data-for='linkedin' href="https://www.linkedin.com/in/kamolu-nehemiah-266a86142/" target="blank" rel="noopener noreferrer"><img src={LinkedInLogo} style={{ width:"2em", height:"2em"}} alt="LinkedIn"/></a>
+                    <a data-tip data-for='twitter' href="https://twitter.com/kamolu_Nehe" target="_blank" rel="noopener noreferrer"><img src={TwitterLogo} loading='lazy' style={{ width:"2em", height:"2em"}} alt="Twitter"/></a>
+                    <a data-tip data-for='facebook'href="https://www.facebook.com/ne.he.547/" target="blank" rel="noopener noreferrer"><img src={FacebookLogo} loading='lazy' style={{ width:"2em", height:"2em"}} alt="Facebook"/></a>
+                    <a data-tip data-for='instagram' href="https://www.instagram.com/kamolu_nehe/" target="blank" rel="noopener noreferrer"><img src={InstagramLogo} loading='lazy' style={{ width:"2em", height:"2em"}} alt="Instagram"/></a>
+                    <a data-tip data-for='linkedin' href="https://www.linkedin.com/in/kamolu-nehemiah-266a86142/" target="blank" rel="noopener noreferrer"><img src={LinkedInLogo} loading='lazy' style={{ width:"2em", height:"2em"}} alt="LinkedIn"/></a>
                 </div>
                 </div>
 

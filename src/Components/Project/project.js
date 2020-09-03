@@ -14,7 +14,7 @@ const project = props =>{
         <div className={props.Styles.Links}>
             <div className={props.Styles.GitHub}>
             <a href={props.GitHubLink} target="_blank" rel="noopener noreferrer" data-tip data-for='gitLogo'>
-                <img src={GitHubLogo} alt="GitHubLogo"/>
+                <img src={GitHubLogo} loading='lazy' alt="GitHubLogo"/>
             </a>
             <ReactToolTip id='gitLogo' backgroundColor='#D74034' effect='float'>
                 <span>View on GitHub</span>
