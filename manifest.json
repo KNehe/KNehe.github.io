@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Nehemiah's Portfolio",
+  "name": "Nehemiah Kamolu's Portfolio",
+  "description": "My software development projects and skills",
   "icons": [
     {
       "src": "favicon.ico",
