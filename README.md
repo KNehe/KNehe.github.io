@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/KNehe/KNehe.github.io.svg?branch=master)](https://travis-ci.org/KNehe/KNehe.github.io)
+[![KNehe>](https://circleci.com/gh/KNehe/KNehe.github.io.svg?style=svg)](https://app.circleci.com/pipelines/github/KNehe/KNehe.github.io)
 
 # My portfolio
 
