@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/KNehe/Portfolio.svg?branch=master)](https://travis-ci.org/KNehe/Portfolio)
+[![Build Status](https://travis-ci.org/KNehe/KNehe.github.io.svg?branch=master)](https://travis-ci.org/KNehe/KNehe.github.io)
+
+# My portfolio
+
+This project was made using reactjs(scss modules, and javascript)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
