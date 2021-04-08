@@ -12,6 +12,7 @@ import Typescript from './../Assets/ts.png';
 import MongoDB from './../Assets/mongodb.png';
 import MySQL from './../Assets/mysql.svg';
 import CloudFirestore from './../Assets/cloudfirestore.png';
+import GitHubImg from '../Assets/github_logo.png'
 
 
 
@@ -89,25 +90,25 @@ const skills = [
         Id: 1,
         Image: Java,
         Title: 'Java',
-        Description: 'Spring Boot'
+        Description: 'Spring Boot, Unit Testing'
     },
     {
         Id: 2,
         Image: JS,
         Title: 'Javascript',
-        Description: 'Node/Express, ReactJs'
+        Description: 'ExpressJs, ReactJs, Unit Testing'
     },
     {
         Id: 3,
         Image: Dart,
         Title: 'Dart',
-        Description: 'Flutter'
+        Description: 'Flutter, Widget $ Unit Testing'
     },
     {
         Id: 4,
         Image: Typescript,
         Title: 'Typescript',
-        Description: 'In Express'
+        Description: 'In Express $ ReactJs'
     },
     {
         Id: 5,
@@ -125,7 +126,7 @@ const skills = [
         Id: 7,
         Image: MySQL,
         Title: 'SQL',
-        Description: 'MySQL'
+        Description: 'MySQL, PostgreSQL'
     },
     {
         Id: 8,
@@ -137,7 +138,13 @@ const skills = [
         Id: 9,
         Image: CloudFirestore,
         Title: 'Firebase',
-        Description: 'Cloud Firestore'
+        Description: 'Cloud Firestore & Real Time Database'
+    },
+    {
+        Id: 10,
+        Image: GitHubImg,
+        Title: 'Git',
+        Description: 'GitHub'
     }
 ];
 
