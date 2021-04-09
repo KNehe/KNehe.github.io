@@ -19,24 +19,44 @@ $color: #D74034;
             color: #D74034; 
             padding-bottom: 1rem;;
             }
-        .Text{
-            color: #e7544a;
-            line-height: 1.6em;
-            text-align: justify;
-            font-size: 1.5em;
-            font-weight: 400;
+        .DescGroup{
+            display: flex;
+            align-items: center;
+            img{
+                width: clamp(18vw,25vw,20vw);
+                opacity: .5;
+            }
+            .Text{
+                color: #e7544a;
+                line-height: 1.6em;
+                text-align: justify;
+                font-size: 1.5em;
+                font-weight: 400;
+                margin-left: .8em;
+
+            }
+            p{
+                margin: 0;
+            }
         }
-        p{
-            margin: 0;
-        }
+       
     }
 }
 
 
 @media screen and (max-width:768px){
-    .Text{
-        line-height: 1.5em !important;
-        font-size: 1.2em !important;
-    }
+
+    .DescGroup{
+        flex-direction: column;
+        img{
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+        .Text{
+            line-height: 1.5em !important;
+            font-size: 1.2em !important;
+         }
+        }
+       
 }
 
