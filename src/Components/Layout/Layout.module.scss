@@ -53,11 +53,13 @@ $text-color: #D74034;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
+        animation: intro_animation 1s  ease-in forwards;
 
         .IntroMessage{
             display:flex;
             align-items: center;
             justify-content: center;
+            margin: 0 1em;
         }
        .IntroText{
             p{
@@ -68,6 +70,7 @@ $text-color: #D74034;
             font-weight: bold;
             box-sizing: border-box;
             line-height: 1.2em;
+            padding: 0 .6em;    
        }
     
     }
@@ -75,22 +78,21 @@ $text-color: #D74034;
 }
 
 .IntroBtn{
-    padding: $base-padding;
-    background-color: rgb(252, 85, 8);
-    border: none;
-    color: #ffffff;
-    -webkit-border-radius: 25px;
-            border-radius: 25px;
-    -webkit-box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
-            box-shadow: 1px 5px 10px rgba(134, 131, 131,0.8);
+     padding: $base-padding;
     width: 15%;
     -webkit-transition: background-color .8s ease-in;
     -o-transition: background-color .8s ease-in;
     transition: background-color .8s ease-in;
+    text-align: center;
+    svg{
+        font-size: 2em;
+        color: red;
+    }
+    animation: intro_btn_animation .8s infinite;
 }
 
-.IntroBtn:hover{
-    background-color:  #da7871;
+.IntroBtn > svg:hover{
+    color: rgba(252, 85, 8,.8);
 }
 
 .IntroBtn:focus{
@@ -110,14 +112,14 @@ $text-color: #D74034;
             -webkit-box-direction: normal; 
              -webkit-flex-direction: column;
                -ms-flex-direction: column; 
-                flex-direction: column;
+                flex-direction: column-reverse;
     }
     .IntroText{
         p{
             margin: 0;
         }
         color: $text-color;
-        font-size: 2.5em !important;
+        font-size: 2.8em !important;
         font-weight:bold;
         text-align: center;
         padding:0 .3em ;
@@ -132,9 +134,28 @@ $text-color: #D74034;
     // }   
     .IntroText{
         font-size: 2.3em !important; 
-        text-align: center;      
+        text-align: center;  
     } 
  }
+
+@keyframes intro_animation {
+     from{
+         opacity: .5;
+     }
+     to{
+         opacity: 1;
+     }
+}
+
+@keyframes intro_btn_animation {
+    from{
+        transform: translateY(10px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
+
 
 
 
