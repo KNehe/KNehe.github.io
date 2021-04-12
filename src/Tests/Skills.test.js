@@ -26,7 +26,8 @@ test(' renders skills section', ()=>{
       expect(js).toBeInTheDocument();
     }
   
-    const jsDesc = getByText(/ExpressJs, ReactJs, Unit Testing/i);
+    const jsDesc = getByText(/ExpressJs, ReactJs, Nextjs, Unit Testing/i);
+    
     expect(jsDesc).toBeInTheDocument();
   
     const dartText = getByText(/Dart/i);
