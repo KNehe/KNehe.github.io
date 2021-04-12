@@ -11,7 +11,10 @@ const projects = () =>{
         <Project 
             key = {project.Id}
             Image = {project.Image}
+            Title = {project.Title}
             Description={project.Description}
+            Technologies={project.Technologies}
+            WebLink={project.WebLink}
             GitHubLink = {project.GitHubLink}
             Styles={Styles}/>
     );
