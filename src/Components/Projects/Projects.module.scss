@@ -22,7 +22,7 @@
             font-size: 2.5em;
             color:#D74034;
             padding-top: 1rem;
-            padding-bottom: 1rem;
+            margin-bottom: 1.5em;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
         }
@@ -33,8 +33,8 @@
         display: grid;
         place-items: center;
         grid-template-columns: repeat( auto-fit , minmax(20rem,1fr));
-        gap: .5rem;
-        row-gap: .5rem;       
+        column-gap: .8em;
+        row-gap: 1.5em;
         
         .Project{
             display: -webkit-box;
@@ -47,41 +47,81 @@
             -webkit-flex-direction: column;
                     flex-direction: column;
             background-color: #f7f0f0;
-            padding: 1rem;
-            -webkit-box-shadow: 1px 4px 10px rgba(134, 131, 131,0.6);
-            box-shadow: 1px 4px 10px rgba(134, 131, 131,0.6);
+            -webkit-box-shadow: 1px 4px 10px rgba(134, 131, 131,.3);
+            box-shadow: 1px 4px 10px rgba(134, 131, 131,.3);
             position: relative;
             -ms-flex-item-align: start;
             -webkit-align-self: flex-start;
                     align-self: flex-start;
             justify-self: flex-start;
-            width: 100%;
             text-align: center;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-                        
-            .Description{
-                -ms-flex-item-align: center;
-                -ms-grid-row-align: center;
-                 -webkit-align-self: center;
-                        align-self: center;
-                font-size: 1.2em;
-                color: #9e3d36;
-            }
-            .Links{
-                position: absolute;
-                bottom: 0;
-                padding-bottom: 1em;
-                -ms-flex-item-align: end;
-                -webkit-align-self: flex-end;
-                        align-self: flex-end;
+            width: 100%;
+            height: 20rem;
+            border-radius: 8px;
 
-                .GitHub:hover{
-                    -webkit-box-shadow: 1px 3px 5px rgb(235, 55, 55);
-                    box-shadow: 1px 3px 5px rgb(235, 55, 55);
-                    padding: .1em;
+            .Top_Section{
+                height: 50%;
+                img{
+                    width: 100%;
+                    height: 100%;  
+                    border-top-left-radius: 8px; 
+                    border-top-right-radius: 8px;                  
                 }
             }
+
+            .Bottom_Section{
+                height: 50%;
+                box-sizing: border-box;
+                padding-left: .2em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #9e3d36;
+
+                .Content{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    p,h4,ul{
+                        margin:0;
+                        padding: 0;
+                        text-align: left;
+                    }
+                   
+                    ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        list-style-type: none;
+                        justify-content: space-between;
+                        li{
+                            font-size: .8em;
+                            background-color: rgba(241, 88, 88,.8);
+                            font-style: italic;
+                            padding:  .3rem .7em;
+                            border-radius: 10px;
+                            color: #fff;
+                            margin-right: .2em;
+                            margin-top: .2em;
+                        }
+                    }
+                    .Links{
+                        display: flex;
+                        a{
+                            margin-right: 1em;
+                            color: rgb(241, 88, 88);
+                            font-weight: 500;
+                            font-style: italic;
+                        }
+
+                    }
+                }
+                
+            }
+                        
+         
         }
     }
 }

@@ -6,21 +6,22 @@ import Skills from './../Skills/Skills';
 import Projects from './../Projects/Projects';
 import Contact from './../Contact/Contact';
 import Footer from './../Footer/Footer';
-import SVG from './../../Assets/devices.svg';
 import resizeWindow from './../Hooks/resizeWindow';
 import Radium from 'radium';
-
+import ProgrammingSVG from '../../Assets/programming.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Layout = () =>{
 
     let introHeight = resizeWindow().height;
 
     const imgStyles ={
-        width:"20em",
-        height:"20em",
-        padding:"1.2em",
+        width:"25em",
+        height:"25em",
+        paddingLeft:"1em",
+        opacity:'.6',
         '@media screen and (max-width:768px)':{
-            width:"10em",
             paddingBottom:'1em',
             height:"10em"
         }
@@ -50,14 +51,17 @@ const Layout = () =>{
                     <div className={Styles.Intro}>
                         <div className={Styles.IntroMessage}>
 
-                            <img src={SVG}  style={imgStyles} alt='devices'/>
-
                             <div className={Styles.IntroText} style={{margin:"0"}}>
-                             <p >Hi, I'm Nehemiah.</p>
-                             <p>A software Developer</p>
-                            </div>                           
+                                <p >Hi, I'm Nehemiah.</p>
+                                <p>A software Developer</p>
+                                </div> 
+
+                            <img src={ProgrammingSVG}  style={imgStyles} alt='devices'/>
+                          
                         </div>
-                        <button className={Styles.IntroBtn} onClick={onBtnClikedHandler}>About</button>  
+                        <div className={Styles.IntroBtn} onClick={onBtnClikedHandler}>
+                            <FontAwesomeIcon icon={faChevronDown}/>
+                        </div>  
                     </div>                  
                 </section>
 
