@@ -52,13 +52,14 @@ const projects = [
     },  
     {  
         Id:4,
-        Image: Tuulye,
-        Title: 'Tuulye',
-        Description: 'Website app for a restaurant',
-        Technologies: ['ReactJs', 'Javascript', 'CSS', 'HTML'],
-        GitHubLink: 'https://github.com/KNehe/Tuulye-FrontEnd',
+        Image: Typescript,
+        Title: 'Ecommerce API',
+        Description: 'Handles buying and selling of goods',
+        Technologies: ['ExpressJs', 'Typescript', 'MongoDB'],
+        GitHubLink: 'https://github.com/KNehe/Nearest_Hospitals',
         WebLink: ''
-    }, 
+    },
+
     {  
         Id:5,
         Image: ShareNews,
@@ -86,17 +87,10 @@ const projects = [
         GitHubLink: 'https://github.com/KNehe/Nearest_Hospitals',
         WebLink: ''
     },
+   
+     
     {  
         Id:8,
-        Image: Typescript,
-        Title: 'Ecommerce API',
-        Description: 'Handles buying and selling of goods',
-        Technologies: ['ExpressJs', 'Typescript', 'MongoDB'],
-        GitHubLink: 'https://github.com/KNehe/Nearest_Hospitals',
-        WebLink: ''
-    },   
-    {  
-        Id:9,
         Image: SpringCloudImg,
         Title: 'House Rent',
         Description: 'Web services for house renting app',
@@ -104,6 +98,15 @@ const projects = [
         GitHubLink: 'https://github.com/KNehe/House-Rent-MicroServices',
         WebLink: ''
     },
+    {  
+        Id:9,
+        Image: Tuulye,
+        Title: 'Tuulye',
+        Description: 'Website app for a restaurant',
+        Technologies: ['ReactJs', 'Javascript', 'CSS', 'HTML'],
+        GitHubLink: 'https://github.com/KNehe/Tuulye-FrontEnd',
+        WebLink: 'https://tuulye-front-end.vercel.app/'
+    }, 
     {  
         Id:10,
         Image: JS,
