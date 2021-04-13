@@ -65,7 +65,7 @@ const projects = [
         Image: ShareNews,
         Title: 'Share news',
         Description: 'Web app for sharing events',
-        Technologies: ['Spring Boot', 'Websocets','Thymleaf', 'HTML/CSS', 'MySQL', 'JQuery'],
+        Technologies: ['Spring Boot', 'WebSockets','Thymleaf', 'HTML/CSS', 'MySQL', 'JQuery'],
         GitHubLink: 'https://github.com/KNehe/share-news',
         WebLink: ''
     },
