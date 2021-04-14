@@ -62,14 +62,14 @@ $text-color: #D74034;
             margin: 0 1em;
         }
        .IntroText{
-            p{
+            h1,h2{
                 margin: 0;
             }
             color: $text-color;
-            font-size: 3.5em;
+            font-size: 2.3em;
             font-weight: bold;
             box-sizing: border-box;
-            line-height: 1.2em;
+            line-height: 1.8em;
             padding: 0 .6em;    
        }
     
@@ -119,11 +119,9 @@ $text-color: #D74034;
             margin: 0;
         }
         color: $text-color;
-        font-size: 2.8em !important;
         font-weight:bold;
         text-align: center;
-        padding:0 .3em ;
-
+        font-size: 2em !important;
    }
  
  }
@@ -133,8 +131,8 @@ $text-color: #D74034;
     //     visibility: hidden;
     // }   
     .IntroText{
-        font-size: 1.8em !important; 
-        margin-top: .3em !important;
+        font-size: 1.2em !important; 
+        margin-top: .5em !important;
     } 
  }
 

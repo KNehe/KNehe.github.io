@@ -52,8 +52,8 @@ const Layout = () =>{
                         <div className={Styles.IntroMessage}>
 
                             <div className={Styles.IntroText} style={{margin:"0"}}>
-                                <p >Hi, I'm Nehemiah.</p>
-                                <p>A software Developer</p>
+                                <h1 >Hi, I'm Nehemiah.</h1>
+                                <h2>A software Developer</h2>
                                 </div> 
 
                             <img src={ProgrammingSVG}  style={imgStyles} alt='devices'/>
