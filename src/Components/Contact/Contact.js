@@ -111,10 +111,10 @@ const Contact = () =>{
 
                 <form onSubmit={onFormSubmittedHandler} ref={ (el) => setFormRef(el) }>
                     
-                    <label htmlFor='email'></label>
+                    <label htmlFor='email'>Email</label>
                     <input 
                       type='email' 
-                      placeholder='Your Email'
+                      placeholder='e.g johndoe@gmail.com'
                       id='email'
                       name='email'
                       required
@@ -122,7 +122,7 @@ const Contact = () =>{
                       onChange={ (event)=>onInputChangedHandler(event,"email") }
                       />
                     
-                    <label htmlFor='msg'></label>
+                    <label htmlFor='msg'>Message</label>
                     <textarea 
                         cols="5" 
                         rows="5" 
