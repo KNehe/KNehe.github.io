@@ -11,7 +11,7 @@ test('renders contact section',()=>{
 
     expect(title).toBeInTheDocument();
 
-    const emailInput = getByPlaceholderText(/Your Email/i);
+    const emailInput = getByPlaceholderText(/e.g johndoe@gmail.com/i);
     expect(emailInput).toBeInTheDocument();
 
     const messageInput  = getByPlaceholderText(/Leave a message/i);
@@ -26,7 +26,7 @@ test('should enter text into inputs', ()=> {
   
     const { container, getByPlaceholderText , getByText } = render( <Contact/> );
     
-    const emailInput = getByPlaceholderText(/Your Email/i);
+    const emailInput = getByPlaceholderText(/e.g johndoe@gmail.com/i);
 
     fireEvent.change( emailInput ,{
         target:{
@@ -51,7 +51,7 @@ test('should show red border when form submitted with empty inputs', ()=> {
   
     const {  getByPlaceholderText , getByText } = render( <Contact/> );
     
-    const emailInput = getByPlaceholderText(/Your Email/i);
+    const emailInput = getByPlaceholderText(/e.g johndoe@gmail.com/i);
 
     fireEvent.change( emailInput ,{
         target:{
