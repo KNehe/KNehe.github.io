@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Styles from'./Navigation.module.scss';
 import HumbegerIcon from '../HumbergerIcon/HumbergerIcon';
 import { NavLink} from 'react-router-dom';
@@ -17,6 +17,10 @@ const Navigation = () =>{
     const [ showShadow, setNavShadow] = useState(false);
 
     let introHeight = resizeWindow().height;
+
+    useEffect(()=>{
+        setToggle(true)
+    },[])
     
     const onHumbergerClickedHanlder = event =>{
         
