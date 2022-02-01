@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "853e319bffdd898890ee21300c7726b9",
+    "revision": "15621faef13623d01d01dffd516c7eb0",
     "url": "/index.html"
   },
   {
-    "revision": "b04f40f40e23690f280e",
-    "url": "/static/css/main.976a7338.chunk.css"
+    "revision": "8ef8c0681326ebee0e3a",
+    "url": "/static/css/main.fc0e9764.chunk.css"
   },
   {
-    "revision": "f045b7cf2ac6e9a9b893",
-    "url": "/static/js/2.d10cc468.chunk.js"
+    "revision": "e50c03a198b8560030e2",
+    "url": "/static/js/2.a51f8fb5.chunk.js"
   },
   {
     "revision": "c60f849fea19912c1f31c93e7b16b666",
-    "url": "/static/js/2.d10cc468.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a51f8fb5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b04f40f40e23690f280e",
-    "url": "/static/js/main.33df4aa3.chunk.js"
+    "revision": "8ef8c0681326ebee0e3a",
+    "url": "/static/js/main.c79b3f2b.chunk.js"
   },
   {
     "revision": "967a46d8b67e4e01db1f",
@@ -32,16 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Ecommerce-web.627aa7a7.png"
   },
   {
-    "revision": "e83faa1592656e6e07f753d282db4831",
-    "url": "/static/media/ExpenseManager.e83faa15.png"
-  },
-  {
     "revision": "1dfbf3d9ca9a1ab549b03e838cd1b06e",
     "url": "/static/media/KAMOKEN_screenshot.1dfbf3d9.PNG"
   },
   {
     "revision": "88b73159e6dbe6608ecf425ac986b050",
     "url": "/static/media/admin-dashboard.88b73159.png"
+  },
+  {
+    "revision": "6eb86bc165eb478a46b646079a2e5a71",
+    "url": "/static/media/cloud.6eb86bc1.jpg"
   },
   {
     "revision": "e5638509f64cd1ae0a429d4fbe1c8f05",
@@ -76,19 +76,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/programming.0b2af822.svg"
   },
   {
-    "revision": "fb0fd1d8bae789555a8710010cb29142",
-    "url": "/static/media/sharenews.fb0fd1d8.PNG"
-  },
-  {
-    "revision": "539d308c4f0064736a0d846381fab72e",
-    "url": "/static/media/spring.539d308c.png"
-  },
-  {
-    "revision": "d1e9f14f6fd4940ae99293b2e87a123c",
-    "url": "/static/media/tuulye.d1e9f14f.PNG"
-  },
-  {
-    "revision": "516ff5f9b3d019d67f2bf871dcedaf9d",
-    "url": "/static/media/twitter.516ff5f9.svg"
+    "revision": "49224b0e53aec159950c88ac30caaa03",
+    "url": "/static/media/twitter.49224b0e.svg"
   }
 ]);
