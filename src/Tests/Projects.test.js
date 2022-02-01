@@ -16,8 +16,8 @@ test('render projects section', ()=>{
       expect(project).toBeInTheDocument();
     }
   
-    const projectsWithSpringBootText = getAllByText(/Spring Boot/i);
-    for(const project of projectsWithSpringBootText){
+    const projectsWithDjangoText = getAllByText(/Django/i);
+    for(const project of projectsWithDjangoText){
       expect(project).toBeInTheDocument();
     }
   
@@ -26,8 +26,8 @@ test('render projects section', ()=>{
       expect(project).toBeInTheDocument();
     }
   
-    const projectsWithReactText = getAllByText(/ReactJS/i);
-    for(const project of projectsWithReactText){
+    const projectsWithNextJsText = getAllByText(/NextJs/i);
+    for(const project of projectsWithNextJsText){
       expect(project).toBeInTheDocument();
     }
     

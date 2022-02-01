@@ -14,12 +14,9 @@ test(' renders skills section', ()=>{
     for( const alt of alts){
       expect(alt).toBeInTheDocument();
     }
-  
-    const  javaSkill = getByText('Java'); 
-    expect(javaSkill).toBeInTheDocument();
     
-    const  javaSkillDesc = getByText(/Spring Boot/i);
-    expect(javaSkillDesc).toBeInTheDocument();
+    const  pythonSkillDesc = getByText(/Python/i);
+    expect(pythonSkillDesc).toBeInTheDocument();
   
     const  jsTexts = getAllByText(/JS/i);
     for(const js of jsTexts){
@@ -51,7 +48,7 @@ test(' renders skills section', ()=>{
     const pythonText = getByText(/Python/i);
     expect(pythonText).toBeInTheDocument();
   
-    const pythonDesc = getByText(/Basics/i);
+    const pythonDesc = getByText(/Django, Django Rest Framework, Unit Testing, Flask/i);
     expect(pythonDesc).toBeInTheDocument();
     
     
