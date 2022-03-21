@@ -14,6 +14,7 @@ import AdminDashImg from '../Assets/admin-dashboard.png'
 import EcommerceMobileImg from '../Assets/Ecommerce-mobile.png'
 import NearestHospitalsImg from '../Assets/nearest_hospitals.png'
 import Cloud from '../Assets/cloud.jpg';
+import ReferPatientScreenShot from '../Assets/refer_screenshot.PNG'
 
 
 const projects = [
@@ -35,6 +36,23 @@ const projects = [
         Technologies: ['Javascript', 'NextJs', 'HTML' , 'SCSS/CSS'],
         GitHubLink: 'https://github.com/KNehe/ecommerce_web',
         WebLink: 'https://ecommerce-web-woad.vercel.app/'
+    }, 
+    {  
+        Id:222,
+        Image: Python,
+        Title: "LiveUp API",
+        Description: 'Powers a web application that enables doctors to track patient prescriptions, avoid redundancy and manual processes',
+        Technologies: ['Python', 'Django', 'PostgreSQL', 'DRF'],
+        GitHubLink: 'https://github.com/knehe/liveup_api/',
+    }, 
+    {  
+        Id:223,
+        Image: ReferPatientScreenShot,
+        Title: "LiveUp Web App",
+        Description: 'Enables doctors to track patient prescriptions, avoid redundancy and manual processes',
+        Technologies: ['Javascript', 'NextJs', 'React Bootstrap', 'HTML' , 'CSS'],
+        GitHubLink: 'https://github.com/KNehe/liveup_web',
+        WebLink: 'https://liveup-web.vercel.app/'
     }, 
 
     {  
